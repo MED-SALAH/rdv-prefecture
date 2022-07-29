@@ -3,8 +3,8 @@ var request = require('request');
 var exec = require('child_process').execFile;
 var jar = request.jar();
 
-var url = 'http://www.seine-saint-denis.gouv.fr/booking/create/2616/0';
-var wait = 5;
+var url = 'https://www.seine-et-marne.gouv.fr/booking/create/48803/0';
+var wait = 400;
 
 function isRdvDisponible(callback) {
     request({
@@ -16,7 +16,7 @@ function isRdvDisponible(callback) {
         },
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
-            'Referer': 'http://www.seine-saint-denis.gouv.fr/booking/create/2616/0'
+            'Referer': 'https://www.seine-et-marne.gouv.fr/booking/create/48803/0'
         },
         jar: jar
     }, function(err, response, body) {
